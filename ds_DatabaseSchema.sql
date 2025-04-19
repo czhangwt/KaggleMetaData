@@ -178,7 +178,7 @@ CREATE TABLE KernelVersions (
     TotalVotes INTEGER NOT NULL,
     IsInternetEnabled BOOLEAN NOT NULL,
     RunningTimeInMilliseconds INTEGER NOT NULL,
-    AcceleratorTypeId INTEGER NOT NULL
+    AcceleratorTypeId INTEGER REFERENCES KernelAcceleratorTypes(Id)
 );
 
 -- Kernel Votes table
