@@ -121,6 +121,7 @@ CREATE TABLE Submissions (
     SubmissionDate TIMESTAMP NOT NULL,
     ScoreDate TIMESTAMP,
     IsAfterDeadline BOOLEAN NOT NULL,
+    IsSelected BOOLEAN NOT NULL,
     PublicScoreLeaderboardDisplay NUMERIC(10,6) NOT NULL,
     PublicScoreFullPrecision NUMERIC(10,6) NOT NULL,
     PrivateScoreLeaderboardDisplay NUMERIC(10,6) NOT NULL,
@@ -179,6 +180,7 @@ CREATE TABLE KernelVersions (
     IsInternetEnabled BOOLEAN NOT NULL,
     RunningTimeInMilliseconds INTEGER NOT NULL,
     AcceleratorTypeId INTEGER REFERENCES KernelAcceleratorTypes(Id)
+    DockerImage VARCHAR(255) NOT NULL
 );
 
 -- Kernel Votes table
