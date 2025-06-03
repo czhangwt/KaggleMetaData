@@ -179,7 +179,7 @@ CREATE TABLE KernelVersions (
     TotalVotes INTEGER NOT NULL,
     IsInternetEnabled BOOLEAN NOT NULL,
     RunningTimeInMilliseconds INTEGER NOT NULL,
-    AcceleratorTypeId INTEGER REFERENCES KernelAcceleratorTypes(Id)
+    AcceleratorTypeId INTEGER REFERENCES KernelAcceleratorTypes(Id),
     DockerImage VARCHAR(255) NOT NULL
 );
 
