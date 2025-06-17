@@ -117,7 +117,7 @@ CREATE TABLE Submissions (
     Id SERIAL PRIMARY KEY,
     SubmittedUserId INTEGER REFERENCES Users(Id),
     TeamId INTEGER REFERENCES Teams(Id),
-    SourceKernelVersionId INTEGER,
+    SourceKernelVersionId INTEGER REFERENCES KernelVersions(Id),
     SubmissionDate TIMESTAMP NOT NULL,
     ScoreDate TIMESTAMP,
     IsAfterDeadline BOOLEAN NOT NULL,
